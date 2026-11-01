@@ -1,0 +1,24 @@
+# 构建产物
+*.class
+tools/*.class
+
+# 第三方 jar（不随仓库分发）
+*.jar
+!tools/asm-*.jar
+
+# 打过补丁的产物
+*-patched.jar
+*.orig
+
+# 系统垃圾
+.DS_Store
+Thumbs.db
+*~
+*.swp
+
+# 日志
+*.log
+
+# 编辑器
+.vscode/
+.idea/
