@@ -1,0 +1,13 @@
+# 统一换行，避免 Windows 上 clone 后 shell 脚本带 CRLF 跑不了
+* text=auto eol=lf
+
+# 这些必须是 LF
+*.sh    text eol=lf
+*.service text eol=lf
+*.py    text eol=lf
+*.java  text eol=lf
+
+# 二进制
+*.jar   binary
+*.png   binary
+*.zip   binary
