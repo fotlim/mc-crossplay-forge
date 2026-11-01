@@ -1,0 +1,18 @@
+[Unit]
+Description=ViaProxy + Geyser (Bedrock bridge for MC 1.21.1)
+After=network-online.target minecraft.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=linocean
+WorkingDirectory=/home/linocean/viaproxy
+ExecStart=/usr/bin/java -Xmx512M -jar /home/linocean/viaproxy/ViaProxy.jar cli --bind-address 127.0.0.1:25568 --target-address 127.0.0.1:25565
+Restart=always
+RestartSec=15
+StartLimitIntervalSec=0
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
